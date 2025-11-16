@@ -33,28 +33,3 @@ The technical challenge is ensuring "statistical fidelity"—the synthetic data 
 * **Mostly AI** ([https://mostly.ai](https://mostly.ai)): Specializes in creating synthetic structured data for banking and insurance to simulate customer behaviors.
 * **NVIDIA Omniverse Replicator** ([https://developer.nvidia.com/omniverse/replicator](https://developer.nvidia.com/omniverse/replicator)): Generates physically accurate synthetic 3D data to train computer vision robots and autonomous vehicles.
 
-Key words: 
-1.  **Tokenization**: The process of breaking down text into smaller units (tokens)—like words or sub-words—that the model can process. It is the atomic unit of "cost" and "processing" in LLMs.
-2.  **Hallucination**: When an AI confidently generates false or nonsensical information. As an SME, we mitigate this using grounding techniques like RAG.
-3.  **Temperature**: A hyperparameter that controls the randomness of the output. Low temperature (0.1) is deterministic and focused; high temperature (0.9) is creative and unpredictable.
-4.  **Inference**: The stage where the model is actually running and making predictions (generating text) based on inputs, distinct from the "training" stage.
-5.  **Context Window**: The limit on how much text (in tokens) the model can "remember" or process in a single conversation turn.
-
-## Architecture & Engineering
-
-6.  **Embeddings**: Transforming text (or images) into lists of numbers (vectors). This allows computers to understand the *semantic meaning* of words by calculating the distance between these numbers.
-7.  **Fine-tuning**: Taking a pre-trained foundation model (like GPT-4) and training it further on a smaller, specific dataset to make it an expert in a niche domain (e.g., medical law).
-8.  **Zero-shot Learning**: The ability of a model to complete a task it was not explicitly trained to do, simply by understanding the instructions in the prompt.
-9.  **Chain-of-Thought (CoT)**: A prompting technique where you ask the model to explain its reasoning step-by-step before giving the final answer, which usually improves accuracy on math or logic tasks.
-10. **Vector Database**: A specialized database designed to store and quickly search through high-dimensional vector embeddings. Essential for RAG apps.
-
-## Data Strategy (Critical for RAG)
-
-11. **Chunking Strategy**: The methodology used to split large documents into smaller segments (chunks) for embedding. We must balance preserving context with retrieval precision to ensure the LLM gets the right data.
-12. **Chunk Overlap**: A data ingestion technique where the end of one text chunk is repeated at the start of the next (e.g., 10% overlap). This ensures that context is not lost at the "seams" between data segments.
-
-## Advanced / Emerging
-
-13. **Latent Space**: A mathematical representation of data where similar concepts are positioned close together. Navigating this space is how GenAI finds relationships between concepts.
-14. **Multimodal**: Models that can process and generate multiple types of media simultaneously, such as text, images, audio, and video.
-15. **System Prompt**: The initial, often hidden, set of instructions given to the AI that defines its persona, constraints, and behavior (e.g., "You are a helpful coding assistant").

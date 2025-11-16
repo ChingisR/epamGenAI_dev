@@ -25,3 +25,11 @@ The custom Python script used to programmatically generate the visualization. It
 ## Author
 * **Chingis R.**
 * *EPAM GenAI Course Assignment*
+
+## Automation & Workflows
+To demonstrate agentic workflow integration, I have configured a **GitHub Action** (`.github/workflows/genai-automation.yml`). 
+
+This workflow automatically:
+1. Sets up a Python environment.
+2. Installs dependencies (`matplotlib`, `networkx`).
+3. Executes the `generate_graph.py` script to verify the integrity of the visualization code on every commit.
