@@ -1,0 +1,11 @@
+fastapi
+uvicorn
+python-multipart
+requests
+python-dotenv
+elasticsearch
+langchain
+langchain-community
+langchain-elasticsearch
+langchain-ollama
+pypdf
